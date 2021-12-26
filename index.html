@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=UTF-8>
+	<link href='https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap' rel='stylesheet'>
+	<title>N.27.VALID_FORM</title>
+<style>
+body {
+	background-color: #A67370;
+	color: #fff;
+	font-size: 20px;
+	line-height: 25px;
+	font-family: 'Raleway', sans-serif;
+}
+span {
+	color: #8F2B30;
+	font-size: 15px;
+	padding-left: 10px;
+}
+.VALID {
+width: 900px;
+margin: 30px 50px;
+}
+input, textarea, select {
+	border: 2px solid #A0B5BE;
+	outline: none;
+}
+input:focus, input:active, textarea:focus, textarea:active   {
+	border: 2px solid #8F2B30;
+	outline: none;
+}
+</style>
+</head>
+<body>
+	<div class='VALID'>
+		<form name='INFO' action='http://fe.it-academy.by/TestForm.php' novalidate onsubmit='submitSite()'>
+			<p><label for='developers'>Разработчики: <input type='text' name='developers' id='developersId'> </label> <span id='developersSpan'></span>  </p>
+			<p> <label for='nameSite'>Название сайта: <input type='text' name='nameSite' id='nameSite'>  </label> <span id='nameSiteSpan'></span> </p>
+			<p> <label for='urlSite'>URL сайта: <input type='text' name='urlSite' id='urlSite'>  </label> <span id='urlSiteSpan'></span> </p>
+			<p> <label for='siteLaunchDate'>Дата запуска сайта: <input type='text' name='siteLaunchDate' id='siteLaunchDate'>  </label> <span id='siteLaunchDateSpan'></span> </p>
+			<p> <label for='visitorsDay'>Посетителей в сутки: <input type='text' name='visitorsDay' id='visitorsDay'>  </label> <span id='visitorsDaySpan'></span> </p>
+			<p> <label for='emailCom'>E-mail для связи: <input type='text' name='emailCom' id='emailCom'>  </label> <span id='emailComSpan'></span> </p>
+			<p> <label>Рубрика каталога: <select size='1' name='catalogHeading'>
+				<option value='appliances'> Бытовая техника </option>
+				<option value='health'> Здоровье </option>
+				<option value='homeComfort'> Домашний уют </option> </label> 
+			</select>  <span id='catalogHeadingSpan'></span> </p>
+			<p id="accommodationP"> Размещение:
+				<input type='radio' name='accommodation' value='Бесплатное' /> Бесплатное 
+				<input type='radio' name='accommodation' value='Платное' /> Платное
+				<input type='radio' name='accommodation' value='VIP' />  VIP <span id='accommodationSpan'></span> </p>
+			<p> <label for='reviews'>Разрешить отзывы: <input type='checkbox' name='reviews' value='1' id='reviews'>  </label> <span id='reviewsSpan'></span> </p>
+			<p> Описание сайта: <span id='commentSpan'></span> </p>
+				<p> <textarea name='comment' rows='5' cols='80' id='comment'></textarea> </p>
+			<p> <input type='submit' value='Опубликовать' /> </p>
+		</form>
+	</div>
+</body>
+<script src="index.js"></script>
+</html>
